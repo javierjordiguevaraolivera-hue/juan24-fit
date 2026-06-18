@@ -63,9 +63,82 @@ const hours = [
   { day: "Domingos", time: "Asesorias online programadas" },
 ];
 
+const businessJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "HealthAndBeautyBusiness",
+  "@id": "https://www.juan24.fit/#business",
+  name: "JUAN24FIT, CORP.",
+  alternateName: "JUAN24FIT",
+  url: "https://www.juan24.fit",
+  image: "https://www.juan24.fit/opengraph-image",
+  description:
+    "Asesoria online de alimentacion, rutinas personalizadas y entrenamiento presencial en Miami y Lima.",
+  telephone: "+17865972641",
+  email: "info@juan24.fit",
+  priceRange: "$$",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "10030 Sw 145 Pl",
+    addressLocality: "Miami",
+    addressRegion: "FL",
+    postalCode: "33186",
+    addressCountry: "US",
+  },
+  areaServed: [
+    { "@type": "City", name: "Miami" },
+    { "@type": "City", name: "Lima" },
+    { "@type": "Country", name: "United States" },
+    { "@type": "Country", name: "Peru" },
+  ],
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "06:00",
+      closes: "21:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Saturday",
+      opens: "08:00",
+      closes: "16:00",
+    },
+  ],
+  makesOffer: [
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Asesoria online de alimentacion",
+        serviceType: "Nutrition coaching",
+      },
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Rutinas personalizadas online",
+        serviceType: "Online fitness coaching",
+      },
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Entrenamiento presencial en Miami y Lima",
+        serviceType: "Personal training",
+      },
+    },
+  ],
+};
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#f6f3ec] pb-48 pt-20 text-[#171512] md:pb-36">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(businessJsonLd) }}
+      />
       <header className="fixed inset-x-0 top-0 z-50 border-b border-black/10 bg-[#f6f3ec]/95 backdrop-blur">
         <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-8">
           <a href="#inicio" className="flex items-center gap-3" aria-label="JUAN24FIT inicio">
