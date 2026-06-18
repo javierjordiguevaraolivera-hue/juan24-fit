@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     siteName: "JUAN24FIT",
     locale: "es_US",
     type: "website",
-    phoneNumbers: ["+17865972641"],
+    phoneNumbers: ["+17865972641", "+51927315396"],
     emails: ["info@juan24.fit"],
     images: [
       {
@@ -88,6 +88,7 @@ export const metadata: Metadata = {
     "business:contact_data:postal_code": "33186",
     "business:contact_data:country_name": "United States",
     "business:contact_data:phone_number": "+17865972641",
+    "business:contact_data:alternate_phone_number": "+51927315396",
     "business:contact_data:email": "info@juan24.fit",
   },
 };

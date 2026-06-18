@@ -73,7 +73,7 @@ const businessJsonLd = {
   image: "https://www.juan24.fit/opengraph-image",
   description:
     "Asesoria online de alimentacion, rutinas personalizadas y entrenamiento presencial en Miami y Lima.",
-  telephone: "+17865972641",
+  telephone: ["+17865972641", "+51927315396"],
   email: "info@juan24.fit",
   priceRange: "$$",
   address: {
@@ -352,6 +352,9 @@ export default function Home() {
             <a href="tel:+17865972641" className="bg-white px-6 py-4 text-center font-black uppercase text-[#bb1f2a]">
               +1 786 597 2641
             </a>
+            <a href="tel:+51927315396" className="bg-white px-6 py-4 text-center font-black uppercase text-[#bb1f2a]">
+              +51 927 315 396
+            </a>
             <a href="mailto:info@juan24.fit" className="border border-white/50 px-6 py-4 text-center font-black uppercase text-white">
               info@juan24.fit
             </a>
@@ -360,7 +363,7 @@ export default function Home() {
       </section>
 
       <footer className="fixed inset-x-0 bottom-0 z-50 border-t border-black/10 bg-[#111111] text-white">
-        <div className="mx-auto grid max-w-7xl gap-3 px-5 py-4 text-sm sm:px-8 md:grid-cols-[1fr_auto_auto_auto] md:items-center">
+        <div className="mx-auto grid max-w-7xl gap-3 px-5 py-4 text-sm sm:px-8 md:grid-cols-[1fr_auto_auto_auto_auto] md:items-center">
           <div>
             <strong className="block text-base">JUAN24FIT, CORP.</strong>
             <span className="text-white/72">Servicios fitness online y presencial</span>
@@ -370,6 +373,9 @@ export default function Home() {
           </address>
           <a href="tel:+17865972641" className="font-black text-[#f9d84a]">
             +17865972641
+          </a>
+          <a href="tel:+51927315396" className="font-black text-[#f9d84a]">
+            +51927315396
           </a>
           <a href="mailto:info@juan24.fit" className="font-black text-[#f9d84a]">
             info@juan24.fit
